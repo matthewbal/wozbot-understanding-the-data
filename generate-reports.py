@@ -18,8 +18,8 @@ if __name__ == "__main__":
 
     #####
     # Change yes/no values to 1/0 so that we can see correlations
-    kDF.RainToday.map(dict(yes=1, no=0))
-    kDF.RainTomorrow.map(dict(yes=1, no=0))
+    kDF['RainToday'] = kDF['RainToday'].map({'Yes': 1., 'No': 0.})
+    kDF['RainTomorrow'] = kDF['RainTomorrow'].map({'Yes': 1., 'No': 0.})
 
     #####
     # Use subset of data to start with
